@@ -1,0 +1,20 @@
+build:
+  gpu: true
+  python_version: "3.10"
+  system_packages:
+    - "libgl1-mesa-glx"
+    - "libglib2.0-0"
+  python_packages:
+    - "ipython==8.10.0"
+    - "Pillow==9.4.0"
+    - "numpy==1.24.2"
+    - "tqdm==4.64.1"
+    - "torch==1.12.1"
+    - "torchvision==0.13.1"
+    - "huggingface-hub==0.12.1"
+    - "opencv-python==4.7.0.68"
+
+  run:
+    - pip install git+https://github.com/sberbank-ai/Real-ESRGAN.git
+
+predict: "predict.py:Predictor"

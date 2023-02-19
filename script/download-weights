@@ -1,0 +1,9 @@
+#!/usr/bin/env python
+
+
+from RealESRGAN import RealESRGAN
+
+
+for scale in [2, 4, 8]:
+    model = RealESRGAN("cuda", scale=scale)
+    model.load_weights(f"weights/RealESRGAN_x{scale}.pth", download=True)
